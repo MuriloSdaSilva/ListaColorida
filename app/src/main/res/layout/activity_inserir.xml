@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InserirActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="105dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="115dp"
+        android:text="Texto a inserir:"
+        app:layout_constraintBottom_toTopOf="@+id/radGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtTexto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="277dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancela"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="Cor:"
+        app:layout_constraintStart_toStartOf="@+id/txtTexto"
+        app:layout_constraintTop_toBottomOf="@+id/txtTexto" />
+
+    <Button
+        android:id="@+id/btnInsere"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="2dp"
+        android:text="Insere"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnCancela"
+        app:layout_constraintEnd_toStartOf="@+id/btnCancela"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCancela"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="297dp"
+        android:onClick="irTelaInicio"
+        android:text="Cancela"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnInsere"
+        app:layout_constraintTop_toBottomOf="@+id/txtTexto" />
+
+    <RadioGroup
+        android:id="@+id/radGroup"
+        android:layout_width="327dp"
+        android:layout_height="167dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="390dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/radVermelho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vermelho" />
+
+        <RadioButton
+            android:id="@+id/radVerde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verde" />
+
+        <RadioButton
+            android:id="@+id/radAzul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Azul" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
