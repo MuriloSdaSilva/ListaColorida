@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,6 +15,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -23,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     SQLiteDatabase bd;
 
     private ListView lvItens;
+    
 
     private ArrayList<String> textos = new ArrayList<>();
 
@@ -87,10 +91,12 @@ public class MainActivity extends AppCompatActivity {
             ArrayAdapter adapter = new ArrayAdapter<String>(
                     this, android.R.layout.simple_list_item_1, android.R.id.text1, linhas
             );
+
+
             lvItens.setAdapter(adapter);
 
-
-
+            //lvItens.setTe
+            //lvItens.setTextColor(Color.RED);
             cursor.moveToFirst();
             while(cursor!=null){
                 linhas.add(cursor.getString(1));

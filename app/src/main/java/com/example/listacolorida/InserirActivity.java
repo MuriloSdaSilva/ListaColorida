@@ -49,7 +49,7 @@ public class InserirActivity extends AppCompatActivity {
             if(TextUtils.isEmpty(txtTexto.getText().toString())){
                 mensagemTexto();
             }else{
-                if((TextUtils.isEmpty(radVermelho.getText().toString()) || !TextUtils.isEmpty(radVerde.getText().toString()) || !TextUtils.isEmpty(radAzul.getText().toString()))){
+                if((TextUtils.isEmpty(radVermelho.getText().toString()) || TextUtils.isEmpty(radVerde.getText().toString()) || TextUtils.isEmpty(radAzul.getText().toString()))){
                     mensagemCor();
                 }else{
                     if(!TextUtils.isEmpty(txtTexto.getText().toString()) || (!TextUtils.isEmpty(radVermelho.getText().toString()) || !TextUtils.isEmpty(radVerde.getText().toString()) || !TextUtils.isEmpty(radAzul.getText().toString()))){
